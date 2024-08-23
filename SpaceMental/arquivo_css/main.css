@@ -1,0 +1,37 @@
+/* Ajustes para o carrossel */
+.carousel {
+    width: 100%; /* Largura total da tela */
+    height: 60vh; /* Altura ajustada do carrossel. Pode ser alterada conforme necessário */
+    overflow: hidden; /* Garante que o conteúdo não saia da área do carrossel */
+}
+
+.carousel-inner {
+    height: 100%; /* Altura completa do carrossel */
+}
+
+.carousel-item {
+    height: 100%; /* Altura completa da área do carrossel */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir o carrossel sem distorção */
+}
+
+/* Ajustes para o texto do carrossel */
+.carousel-caption {
+    bottom: 20%; /* Ajusta a posição do texto em relação à parte inferior da imagem */
+}
+
+.carousel-caption h1,
+.carousel-caption p {
+    color: white; /* Garante que o texto seja visível sobre a imagem */
+}
+
+/* Estilos para o footer */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
