@@ -1,0 +1,54 @@
+CREATE TABLE usuario(
+    Id_usuario INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Nome VARCHAR(100),
+    Email VARCHAR(100),
+    Senha VARCHAR(100),
+    Data_nascimento DATE,
+    Genero VARCHAR(20)
+);
+CREATE TABLE sessao(
+    Id_sessao INT PRIMARY KEY AUTO_INCREMENT,
+    Id_usuario INT,
+    Data DATETIME NOT NULL,
+    Duracao INT, 
+    Tipo VARCHAR(50),
+    FOREIGN KEY (Id_usuario) REFERENCES Usuario (Id_usuario)
+);
+CREATE TABLE atividade(
+     Id_atividade INT PRIMARY KEY AUTO_INCREMENT,
+     Nome VARCHAR (100) NOT NULL,
+     Descricao TEXT,
+     Dificuldade ENUM('facil', 'medio', 'dificil'),
+     Tipo VARCHAR(50)
+);
+CREATE TABLE diario(
+    Id_diario INT PRIMARY KEY AUTO_INCREMENT,
+    Id_usuario INT,
+    Data DATE NOT NULL,
+    Anotacoes TEXT,
+    Humor ENUM('otimo', 'bom', 'regular', 'ruim'),
+    FOREIGN KEY (Id_usuario) REFERENCES Usuario (Id_usuario)
+);
+CREATE TABLE meta(
+    Id_meta INT PRIMARY KEY AUTO_INCREMENT,
+    Id_usuario INT,
+    Descricao TEXT NOT NULL,
+    Data_criacao DATE NOT NULL,
+    Data_conclusao DATE,
+    Status ENUM('em andamento', 'concluido'),
+    FOREIGN KEY (Id_usuario) REFERENCES Usuario(Id_usuario)
+);
+CREATE TABLE recurso(
+    Id_recurso INT PRIMARY KEY AUTO_INCREMENT,
+    Titulo VARCHAR(100) NOT NULL,
+    Tipo ENUM('artigo', 'video', 'audio') NOT NULL,
+    URL VARCHAR (255),
+    Descricao TEXT
+);
+CREATE TABLE usuario_atividade(
+    Id_usuario INT,
+    Id_atividade INT,
+    PRIMARY KEY (Id_usuario, Id_atividade),
+    FOREIGN KEY (Id_usuario) REFERENCES Usuario(Id_usuario),
+    FOREIGN KEY (Id_atividade) REFERENCES Atividade(Id_atividade)
+);
