@@ -7,10 +7,10 @@
 }
 
 body {
-  background-image: url("../images/Login.jpeg");
+  background-image: url(../images/Cadastro.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* Adicionado ponto e vírgula */
+  background-attachment: fixed;
 }
 
 .container {
@@ -25,20 +25,22 @@ body {
   padding: 30px;
   border-radius: 4%;
   box-shadow: 3px 3px 1px 0px #00000060;
+  width: 400px;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #272262;
+  color: #0d009c;
 }
 
-.label-float input {
+.label-float input, 
+.label-float select {
   width: 100%;
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid #272262;
+  border-bottom: 2px solid #0d009c;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -54,34 +56,37 @@ h1 {
   margin-bottom: 5%;
 }
 
-.label-float input:focus {
+.label-float input:focus, 
+.label-float select:focus {
   border-bottom: 2px solid #4038a0;
 }
 
 .label-float label {
-  color: #272262;
-  pointer-events: none; /* Corrigido */
+  color: #0d009c;
+  pointer-events: none;
   position: absolute;
-  top: 0;
+  top: -10px; 
   left: 0;
-  margin-top: 13px;
+  margin-top: 0; 
   transition: all .3s ease-out;
 }
 
 .label-float input:focus + label,
-.label-float input:valid + label {
+.label-float input:valid + label,
+.label-float select:focus + label,
+.label-float select:valid + label {
   font-size: 13px;
-  margin-top: 0;
+  margin-top: -10px; 
   color: #4038a0;
 }
 
 button {
   background-color: transparent;
-  border: 2px solid #272262; /* Corrigido para usar border */
-  color: #272262;
+  border-color: #0d009c;
+  color: #0d009c;
   padding: 7px;
   font-weight: bold;
-  font-size: 1rem; /* Alterado para rem */
+  font-size: 12pt;
   margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
@@ -90,12 +95,8 @@ button {
 }
 
 button:hover {
-  background-color: #272262;
+  background-color: #0d009c;
   color: #fff;
-}
-
-button:focus {
-  outline: 2px solid #4038a0; /* Adicionado estilo de foco */
 }
 
 .justify-center {
@@ -103,41 +104,27 @@ button:focus {
   justify-content: center;
 }
 
-hr {
-  margin-top: 10%;
-  margin-bottom: 10%;
-  width: 60%;
-}
-
-p {
-  color: #272262;
-  font-size: 14pt;
-  text-align: center;
-}
-
-a {
-  color: #7a3077;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all .3s ease-out;
-}
-
-a:hover {
-  color: #272262;
-}
-
 .fa-eye {
   position: absolute;
   top: 15px;
   right: 10px;
   cursor: pointer;
-  color: #272262;
+  color: #0d009c;
 }
 
 #msgError {
   text-align: center;
   color: #ff0000;
   background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+#msgSuccess {
+  text-align: center;
+  color: #00bb00;
+  background-color: #bbffbe;
   padding: 10px;
   border-radius: 4px;
   display: none;
