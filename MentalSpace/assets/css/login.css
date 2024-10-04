@@ -10,7 +10,7 @@ body {
   background-image: url("../images/Login.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* Adicionado ponto e vírgula */
+  background-attachment: fixed; 
 }
 
 .container {
@@ -77,11 +77,11 @@ h1 {
 
 button {
   background-color: transparent;
-  border: 2px solid #272262; /* Corrigido para usar border */
+  border: 2px solid #272262; 
   color: #272262;
   padding: 7px;
   font-weight: bold;
-  font-size: 1rem; /* Alterado para rem */
+  font-size: 1rem; 
   margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
@@ -95,7 +95,7 @@ button:hover {
 }
 
 button:focus {
-  outline: 2px solid #4038a0; /* Adicionado estilo de foco */
+  outline: 2px solid #4038a0; 
 }
 
 .justify-center {

@@ -5,9 +5,9 @@ let nome = document.querySelector('#nome');
 let labelNome = document.querySelector('#labelNome');
 let validNome = false;
 
-let usuario = document.querySelector('#usuario');
-let labelUsuario = document.querySelector('#labelUsuario');
-let validUsuario = false;
+let email = document.querySelector('#email');
+let labelEmail = document.querySelector('#labelEmail');
+let validEmail = false;
 
 let senha = document.querySelector('#senha');
 let labelSenha = document.querySelector('#labelSenha');
@@ -31,7 +31,7 @@ let msgSuccess = document.querySelector('#msgSuccess');
 nome.addEventListener('keyup', () => {
   if (nome.value.length <= 2) {
     labelNome.setAttribute('style', 'color: red');
-    labelNome.innerHTML = 'Nome *Insira no mínimo 3 caracteres';
+    labelNome.innerHTML = 'Insira no mínimo 3 caracteres';
     nome.setAttribute('style', 'border-color: red');
     validNome = false;
   } else {
@@ -42,24 +42,24 @@ nome.addEventListener('keyup', () => {
   }
 });
 
-usuario.addEventListener('keyup', () => {
-  if (usuario.value.length <= 4) {
-    labelUsuario.setAttribute('style', 'color: red');
-    labelUsuario.innerHTML = 'Usuário *Insira no mínimo 5 caracteres';
-    usuario.setAttribute('style', 'border-color: red');
-    validUsuario = false;
+email.addEventListener('keyup', () => {
+  if (email.value.length <= 4) {
+    labelEmail.setAttribute('style', 'color: red');
+    labelEmail.innerHTML = 'Insira no mínimo 5 caracteres';
+    email.setAttribute('style', 'border-color: red');
+    validEmail = false;
   } else {
-    labelUsuario.setAttribute('style', 'color: green');
-    labelUsuario.innerHTML = 'Usuário';
-    usuario.setAttribute('style', 'border-color: green');
-    validUsuario = true;
+    labelEmail.setAttribute('style', 'color: green');
+    labelEmail.innerHTML = 'Usuário';
+    email.setAttribute('style', 'border-color: green');
+    validEmail = true;
   }
 });
 
 senha.addEventListener('keyup', () => {
   if (senha.value.length <= 5) {
     labelSenha.setAttribute('style', 'color: red');
-    labelSenha.innerHTML = 'Senha *Insira no mínimo 6 caracteres';
+    labelSenha.innerHTML = 'Insira no mínimo 6 caracteres';
     senha.setAttribute('style', 'border-color: red');
     validSenha = false;
   } else {
@@ -73,7 +73,7 @@ senha.addEventListener('keyup', () => {
 confirmSenha.addEventListener('keyup', () => {
   if (senha.value !== confirmSenha.value) {
     labelConfirmSenha.setAttribute('style', 'color: red');
-    labelConfirmSenha.innerHTML = 'Confirmar Senha *As senhas não conferem';
+    labelConfirmSenha.innerHTML = 'As senhas não conferem';
     confirmSenha.setAttribute('style', 'border-color: red');
     validConfirmSenha = false;
   } else {
@@ -84,7 +84,7 @@ confirmSenha.addEventListener('keyup', () => {
   }
 });
 
-// Validação da Data de Nascimento
+
 dataNascimento.addEventListener('change', () => {
   if (dataNascimento.value) {
     labelDataNascimento.setAttribute('style', 'color: green');
@@ -92,12 +92,11 @@ dataNascimento.addEventListener('change', () => {
     validDataNascimento = true;
   } else {
     labelDataNascimento.setAttribute('style', 'color: red');
-    labelDataNascimento.innerHTML = 'Data de Nascimento *Campo obrigatório';
+    labelDataNascimento.innerHTML = 'Campo obrigatório';
     validDataNascimento = false;
   }
 });
 
-// Validação do Gênero
 genero.addEventListener('change', () => {
   if (genero.value) {
     labelGenero.setAttribute('style', 'color: green');
@@ -105,18 +104,18 @@ genero.addEventListener('change', () => {
     validGenero = true;
   } else {
     labelGenero.setAttribute('style', 'color: red');
-    labelGenero.innerHTML = 'Gênero *Campo obrigatório';
+    labelGenero.innerHTML = 'Campo obrigatório';
     validGenero = false;
   }
 });
 
 function cadastrar() {
-  if (validNome && validUsuario && validSenha && validConfirmSenha && validDataNascimento && validGenero) {
+  if (validNome && validEmail && validSenha && validConfirmSenha && validDataNascimento && validGenero) {
     let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
     
     listaUser.push({
       nomeCad: nome.value,
-      userCad: usuario.value,
+      emailCad: email.value,
       senhaCad: senha.value,
       dataNascimentoCad: dataNascimento.value,
       generoCad: genero.value
@@ -130,7 +129,7 @@ function cadastrar() {
     msgError.innerHTML = '';
     
     setTimeout(() => {
-      window.location.href = './assets/html/login.html';
+      window.location.href = 'login.html';
     }, 2000);
   
   } else {
