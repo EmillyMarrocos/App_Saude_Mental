@@ -87,7 +87,8 @@ button {
   padding: 7px;
   font-weight: bold;
   font-size: 12pt;
-  margin-top: 20px;
+  margin-top: 10px; 
+  margin-bottom: 20px;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
@@ -128,4 +129,10 @@ button:hover {
   padding: 10px;
   border-radius: 4px;
   display: none;
+}
+
+
+p {
+  margin-top: 1px; 
+  text-align: center; 
 }
