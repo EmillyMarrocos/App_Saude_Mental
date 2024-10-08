@@ -3,151 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/equipe.css"> 
     <title>Equipe</title>
 </head>
 <body>
-    <section>
-        <div class="icon-container">
-            <div class="icon-box about" data-modal="popup-Emilly">
-                <i class="fa-regular fa-address-card"></i>
-            </div>
-            <div class="icon-box projects" data-modal="popup-Melissa">
-                <i class="fa-solid fa-laptop-code"></i>
-            </div>
-            <div class="icon-box testimonial" data-modal="popup-Lara">
-                <i class="fa-solid fa-users-rectangle"></i>
-            </div>
-            <div class="icon-box contact" data-modal="popup-Filipe">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popups -->
-    <div class="popup" id="popup-Emilly" style="display: none;">
-        <div class="popup-container">
-            <div class="popup-header">
-                <div class="button-container">
-                    <button class="close-btn circle-btn red">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <button class="close-btn circle-btn yellow">
-                        <i class="fa-solid fa-window-minimize"></i>
-                    </button>
-                    <button class="maximize-btn circle-btn green">
-                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="popup-body about-container">
-                <div class="img-frame">
-                    <img src="./imagens/Emilly.jpeg" alt="Emilly Marrocos" />
-                </div>
-                <div class="hero-content">
-                    <h1>Emilly Marrocos</h1>
-                    <p>
-                        I'm a front-end developer. I have dedicated myself to creating
-                        visually appealing and user-friendly websites. I'm always open to
-                        using new skill sets and I believe in the power of collaboration,
-                        working closely with designers and back-end developers to deliver
-                        cohesive and effective solutions.
-                    </p>
-                </div>
-            </div>
-        </div>
+  <section>
+    <div class="icon-container">
+      <div class="icon-box about" data-modal="about">
+        <i class="fa-regular fa-address-card"></i>
+      </div>
+      <div class="icon-box projects" data-modal="projects">
+        <i class="fa-solid fa-laptop-code"></i>
+      </div>
+      <div class="icon-box testimonial" data-modal="testimonial">
+        <i class="fa-solid fa-users-rectangle"></i>
+      </div>
+      <div class="icon-box contact" data-modal="contact">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
     </div>
+  </section>
 
-    <div class="popup" id="popup-Melissa" style="display: none;">
-        <div class="popup-container">
-            <div class="popup-header">
-                <div class="button-container">
-                    <button class="close-btn circle-btn red">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <button class="close-btn circle-btn yellow">
-                        <i class="fa-solid fa-window-minimize"></i>
-                    </button>
-                    <button class="maximize-btn circle-btn green">
-                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="popup-body about-container">
-                <div class="img-frame">
-                    <img src="./imagens/Melissa.jpeg" alt="Melissa Galdino" />
-                </div>
-                <div class="hero-content">
-                    <h1>Melissa Galdino</h1>
-                    <p>
-                        I'm a backend developer passionate about building robust and scalable applications.
-                        I enjoy working with various technologies and always strive to improve my skills.
-                    </p>
-                </div>
-            </div>
+  <div class="popup" id="about">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
         </div>
-    </div>
-
-    <div class="popup" id="popup-Lara" style="display: none;">
-        <div class="popup-container">
-            <div class="popup-header">
-                <div class="button-container">
-                    <button class="close-btn circle-btn red">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <button class="close-btn circle-btn yellow">
-                        <i class="fa-solid fa-window-minimize"></i>
-                    </button>
-                    <button class="maximize-btn circle-btn green">
-                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="popup-body about-container">
-                <div class="img-frame">
-                    <img src="./imagens/Lara.jpeg" alt="Lara Gabriella" />
-                </div>
-                <div class="hero-content">
-                    <h1>Lara Gabriella</h1>
-                    <p>
-                        I'm a UX/UI designer with a passion for creating intuitive and user-friendly interfaces.
-                        I believe that design is not just about aesthetics but also about solving problems.
-                    </p>
-                </div>
-            </div>
+      </div>
+      <div class="popup-body about-container">
+        <div class="img-frame">
+          <img
+            src="imagens/Emilly.jpeg"
+            alt="" />
         </div>
-    </div>
-
-    <div class="popup" id="popup-Filipe" style="display: none;">
-        <div class="popup-container">
-            <div class="popup-header">
-                <div class="button-container">
-                    <button class="close-btn circle-btn red">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <button class="close-btn circle-btn yellow">
-                        <i class="fa-solid fa-window-minimize"></i>
-                    </button>
-                    <button class="maximize-btn circle-btn green">
-                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="popup-body about-container">
-                <div class="img-frame">
-                    <img src="./imagens/Filipe.jpeg" alt="Filipe da Costa" />
-                </div>
-                <div class="hero-content">
-                    <h1>Filipe da Costa</h1>
-                    <p>
-                        I'm a software engineer with a strong background in algorithms and data structures.
-                        I enjoy tackling complex challenges and finding efficient solutions.
-                    </p>
-                </div>
-            </div>
+        <div class="hero-content">
+          <h1>Emilly Marrocos</h1>
+          <p>
+            Sou uma desenvolvedora front-end. Dediquei-me a criar
+            sites visualmente atraentes e amigáveis para o usuário. Estou sempre aberta a
+            usar novas habilidades e acredito no poder da colaboração,
+            trabalhando em estreita colaboração com designers e desenvolvedores back-end para oferecer
+            soluções coesas e eficazes.
+          </p>
         </div>
-    </div>
 
-    <script src="./assets/js/equipe.js" defer></script>
-</body>
-</html>
+        <div class="popup-body about-container">
+          <div class="img-frame">
+            <img
+              src="imagens/Melissa.jpeg"
+              alt="" />
+          </div>
+          <div class="hero-content">
+        <div class="hero-content">
+          <h1>Melissa Galdino</h1>
+          <p>
+            Sou uma desenvolvedora front-end. Dediquei-me a criar
+            sites visualmente atraentes e amigáveis para o usuário. Estou sempre aberta a
+            usar novas habilidades e acredito no poder da colaboração,
+            trabalhando em estreita colaboração com designers e desenvolvedores back-end para oferecer
+            soluções coesas e eficazes.
+          </p>
+        </div>
+
+        <div class="popup-body about-container">
+          <div class="img-frame">
+            <img
+              src="imagens/Lara.jpeg"
+              alt="" />
+          </div>
+          <div class="hero-content">
+        <div class="hero-content">
+          <h1>Lara Gabriella</h1>
+          <p>
+            Sou uma desenvolvedora front-end. Dediquei-me a criar
+            sites visualmente atraentes e amigáveis para o usuário. Estou sempre aberta a
+            usar novas habilidades e acredito no poder da colaboração,
+            trabalhando em estreita colaboração com designers e desenvolvedores back-end para oferecer
+            soluções coesas e eficazes.
+          </p>
+        </div>
+
+        <div class="popup-body about-container">
+          <div class="img-frame">
+            <img
+              src="imagens/Filipe.jpeg"
+              alt="" />
+          </div>
+          <div class="hero-content">
+        <div class="hero-content">
+          <h1>Filipe da Costa</h1>
+          <p>
+            Sou uma desenvolvedora front-end. Dediquei-me a criar
+            sites visualmente atraentes e amigáveis para o usuário. Estou sempre aberta a
+            usar novas habilidades e acredito no poder da colaboração,
+            trabalhando em estreita colaboração com designers e desenvolvedores back-end para oferecer
+            soluções coesas e eficazes.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="projects">
+    <div class="popup-container">
+      <div class="popup-header">
+        <div class="button-container">
+          <button class="close-btn circle-btn red">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="close-btn circle-btn yellow">
+            <i class="fa-solid fa-window-minimize"></i>
+          </button>
+          <button class="maximize-btn circle-btn green">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="popup" id="contact">
+        <div class="popup-container">
+          <div class="popup-header">
+            <div class="button-container">
+              <button class="close-btn circle-btn red">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+              <button class="close-btn circle-btn yellow">
+                <i class="fa-solid fa-window-minimize"></i>
+              </button>
+              <button class="maximize-btn circle-btn green">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+              </button>
+            </div>
+          </div>
+          <div class="popup-body contact-container">
+            <h1>Contato</h1>
+            <p>
+              Se você quiser saber mais ou apenas conversar,
+              sinta-se à vontade para entrar em contato!
+            </p>
+            <form>
+              <div class="form-control">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-control">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required />
+              </div>
+              <div class="form-control">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" required></textarea>
+              </div>
+              <button type="submit">Enviar Mensagem</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
