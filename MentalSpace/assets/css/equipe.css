@@ -45,14 +45,13 @@ h1 {
 html,
 body {
   position: relative;
-  min-height: 100vh; /* Usar min-height em vez de height */
+  min-height: 100vh;
   width: 100%;
   background-image: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/773ac512-567c-4316-81c9-511db0c8a094);
   background-repeat: no-repeat;
   background-size: cover;
-    margin: 0;
-    font-family: Arial, sans-serif;
-
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 section {
@@ -82,6 +81,30 @@ section {
   border-radius: 12px;
 }
 
+.team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.team-member {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 0;
+}
+
 .icon-box {
   display: flex;
   justify-content: center;
@@ -107,7 +130,7 @@ section {
     rgb(182, 164, 248) 0%,
     rgb(75, 52, 159) 70%
   );
-  padding-bottom: 100px; /* Adicionado para permitir rolagem */
+  padding-bottom: 100px;
 }
 
 .testimonial {
