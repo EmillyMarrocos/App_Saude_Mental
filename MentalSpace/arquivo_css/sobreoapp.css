@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.about-app {
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.about-app h2 {
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.about-app p {
+    font-size: 1.1rem; /* Aumentar um pouco o tamanho da fonte */
+    line-height: 1.6; /* Aumentar o espaçamento entre linhas */
+}
+
+.footer {
+    background-color: #343a40; /* Cor do fundo do rodapé */
+    color: white; /* Cor do texto do rodapé */
+}
+
+.footer p {
+    margin: 0; /* Remove margens no parágrafo */
+}
