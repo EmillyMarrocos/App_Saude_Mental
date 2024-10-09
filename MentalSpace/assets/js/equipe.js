@@ -1,55 +1,85 @@
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function () {
-    // Inicialização do carrossel
-    const slides = document.querySelectorAll('.swiper-slide');
-    let currentSlide = 0;
+const iconBoxes = document.querySelectorAll(".icon-box");
+const iconBoxContainers = document.querySelectorAll(".icon-container");
+const closeBtns = document.querySelectorAll(".close-btn");
+const maximizeBtns = document.querySelectorAll(".maximize-btn");
+const body = document.querySelector("body");
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${(i - index) * 100}%)`;
-      });
-    }
+// Define a fonte do corpo para "Quicksand"
+body.style.fontFamily = "'Quicksand', sans-serif";
 
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
+iconBoxes.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let modal = btn.getAttribute("data-modal");
+    document.getElementById(modal).style.display = "block";
+    body.classList.add("prevent-background-scroll");
+  });
+});
 
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-    }
-
-    document.querySelector('.swiper-button-next').addEventListener('click', nextSlide);
-    document.querySelector('.swiper-button-prev').addEventListener('click', prevSlide);
-
-    // Exibir pop-up ao clicar em um projeto
-    const projectThumbnails = document.querySelectorAll('.project-thumbnail');
-    const popup = document.querySelector('.popup');
-    const popupContainer = document.querySelector('.popup-container');
-    const closeBtn = document.querySelector('.close-btn');
-
-    projectThumbnails.forEach(thumbnail => {
-      thumbnail.addEventListener('click', function () {
-        const projectDetails = this.getAttribute('data-details');
-        popupContainer.innerHTML = `
-          <h2>Project Details</h2>
-          <p>${projectDetails}</p>
-          <button class="close-btn">Close</button>
-        `;
-        popup.style.display = 'flex';
-      });
-    });
-
-    closeBtn.addEventListener('click', function () {
-      popup.style.display = 'none';
-    });
-
-    // Fechar o pop-up ao clicar fora da caixa
-    popup.addEventListener('click', function (e) {
-      if (e.target === popup) {
-        popup.style.display = 'none';
-      }
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let modal = btn.closest(".popup");
+    modal.style.display = "none";
+    body.classList.remove("prevent-background-scroll");
+    iconBoxContainers.forEach((container) => {
+      container.style.display = "flex";
     });
   });
-</script>
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("popup")) {
+    e.target.style.display = "none";
+    body.classList.remove("prevent-background-scroll");
+  }
+});
+
+maximizeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let modal = btn.closest(".popup");
+    let container = modal.querySelector(".popup-container");
+    let bodyModal = modal.querySelector(".popup-body"); // Renomeado para evitar conflito com o body global
+
+    if (modal.classList.contains("maximized")) {
+      container.style.width = "min(900px, 90%)";
+      container.style.top = "45%";
+      bodyModal.style.height = "70vh"; // Corrigido para o bodyModal
+    } else {
+      container.style.width = "100%";
+      container.style.top = "50%";
+      bodyModal.style.height = "90vh"; // Corrigido para o bodyModal
+    }
+
+    modal.classList.toggle("maximized");
+    // A classe prevent-scroll foi removida para o body
+  });
+});
+
+var swiper = new Swiper(".swiper", {
+  preventClicks: true,
+  noSwiping: true,
+  freeMode: false,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
+  },
+  mousewheel: {
+    invert: false,
+    thresholdDelta: 50,
+    sensitivity: 1,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    680: {
+      slidesPerView: 2,
+    },
+    1100: {
+      slidesPerView: 3,
+    },
+    1600: {
+      slidesPerView: 4,
+    },
+  },
+});
