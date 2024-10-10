@@ -1,26 +1,106 @@
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
 }
 
+/* Estilos do cabeçalho */
+header {
+    margin-bottom: 60px; /* Espaço para o navbar fixo */
+}
+
+/* Estilos da seção "Sobre o App" */
 .about-app {
-    background-color: #f8f9fa; /* Cor de fundo suave */
-    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #e9ecef;
+    border-radius: 10px;
+    padding: 30px 20px;
 }
 
 .about-app h2 {
-    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .about-app p {
-    font-size: 1.1rem; /* Aumentar um pouco o tamanho da fonte */
-    line-height: 1.6; /* Aumentar o espaçamento entre linhas */
+    font-size: 1.2rem;
 }
 
+/* Estilos da seção "Funcionalidades do App" */
+.features {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.features p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos dos ícones das funcionalidades */
+.feature-icon {
+    margin-bottom: 15px;
+}
+
+.feature-icon img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Estilos da seção "Imagens ou Demonstração do App" */
+.demo {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+.demo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.demo p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.demo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.demo video {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Estilos do rodapé */
 .footer {
-    background-color: #343a40; /* Cor do fundo do rodapé */
-    color: white; /* Cor do texto do rodapé */
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px 0;
 }
 
 .footer p {
-    margin: 0; /* Remove margens no parágrafo */
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .features h2, .about-app h2, .demo h2 {
+        font-size: 2rem;
+    }
+
+    .features p, .about-app p, .demo p {
+        font-size: 1rem;
+    }
 }
