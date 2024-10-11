@@ -1,18 +1,23 @@
 /* Estilos da seção "Feedbacks" */
 .feedbacks {
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     border-radius: 10px;
     padding: 30px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .feedbacks h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
 }
 
 .feedbacks p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 30px;
+    color: #666;
+    line-height: 1.6;
 }
 
 .feedback-list {
@@ -20,7 +25,11 @@
 }
 
 .feedback-item {
-    margin-bottom: 20px;
+    margin-bottom: 30px; 
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
 }
 
 .blockquote {
@@ -28,16 +37,62 @@
     padding-left: 20px;
     font-style: italic;
     color: #495057;
+    margin: 0;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.feedback-author {
+    margin-top: 15px; /* Espaçamento entre o comentário e o nome do autor */
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+
+.feedback-item blockquote + footer {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
 }
 
 .feedback-form {
     margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .feedback-form .form-label {
     font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+.feedback-form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .feedback-form .btn {
     width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form .btn:hover {
+    background-color: #0056b3;
 }

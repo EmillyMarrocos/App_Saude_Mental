@@ -7,10 +7,10 @@
 }
 
 body {
-  background-image: url(../images/Cadastro.png);
+  background-image: url("/MentalSpace/imagens/Login.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; 
 }
 
 .container {
@@ -34,7 +34,7 @@ h1 {
   color: #0d009c;
 }
 
-.label-float input, 
+.label-float input,
 .label-float select {
   width: 100%;
   padding: 5px 5px;
@@ -56,39 +56,38 @@ h1 {
   margin-bottom: 5%;
 }
 
-.label-float input:focus, 
+.label-float input:focus,
 .label-float select:focus {
   border-bottom: 2px solid #4038a0;
 }
 
 .label-float label {
-  color: #0d009c;
-  pointer-events: none;
+  color: #272262;
+  pointer-events: none; 
   position: absolute;
-  top: -10px; 
+  top: -10px;
   left: 0;
-  margin-top: 0; 
+  margin-top: 0;
   transition: all .3s ease-out;
 }
 
 .label-float input:focus + label,
-.label-float input:valid + label,
+.label-float input:valid + label 
 .label-float select:focus + label,
 .label-float select:valid + label {
   font-size: 13px;
-  margin-top: -10px; 
+  margin-top: -10px;
   color: #4038a0;
 }
 
 button {
   background-color: transparent;
-  border-color: #0d009c;
-  color: #0d009c;
+  border-color: #272262; 
+  color: #272262;
   padding: 7px;
   font-weight: bold;
-  font-size: 12pt;
-  margin-top: 10px; 
-  margin-bottom: 20px;
+  font-size: 12pt; 
+  margin-top: 10px;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
@@ -96,7 +95,7 @@ button {
 }
 
 button:hover {
-  background-color: #0d009c;
+  background-color: #272262;
   color: #fff;
 }
 
@@ -110,7 +109,7 @@ button:hover {
   top: 15px;
   right: 10px;
   cursor: pointer;
-  color: #0d009c;
+  color: #272262;
 }
 
 #msgError {
@@ -122,7 +121,7 @@ button:hover {
   display: none;
 }
 
-#msgSuccess {
+#msgSucess {
   text-align: center;
   color: #00bb00;
   background-color: #bbffbe;
@@ -131,8 +130,33 @@ button:hover {
   display: none;
 }
 
+button:focus {
+  outline: 2px solid #4038a0; 
+}
+
+hr {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 60%;
+}
 
 p {
-  margin-top: 1px; 
-  text-align: center; 
+  color: #272262;
+  font-size: 14pt;
+  text-align: center;
 }
+
+a {
+  color: #7a3077;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+a:hover {
+  color: #272262;
+}
+
+
+
+

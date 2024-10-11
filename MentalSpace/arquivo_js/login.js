@@ -29,7 +29,7 @@ function entrar() {
   
   if (userValid) {
 
-    window.location.href = './teladeinicio.html';
+    window.location.href = "/MentalSpace/arquivo_js/teladeinicio.js";
     
     let mathRandom = Math.random().toString(16).substr(2);
     let token = mathRandom + mathRandom;
